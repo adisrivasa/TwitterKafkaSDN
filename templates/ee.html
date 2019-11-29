@@ -1,0 +1,24 @@
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+<div class="container">
+  <table class="responsive-table">
+    <caption>Tweets and their sentiments</caption>
+    <thead>
+      <tr>
+        <th scope="col">User Id</th>
+        <th scope="col">Twitter handle</th>
+        <th scope="col">Tweet</th>
+        <th scope="col">Sentiment score</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for item in list %}
+        <tr>
+          <th>{{ item[0] }}</th>
+          <th>{{ item[1] }}</th>
+          <th>{{ item[2] }}</th>
+          <th>{{ item[3] }}</th>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
